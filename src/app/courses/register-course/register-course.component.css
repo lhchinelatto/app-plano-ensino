@@ -1,0 +1,9 @@
+mat-form-field,
+textarea {
+  width: 20%;
+}
+
+form-container {
+  margin: auto;
+  position: relative;
+}

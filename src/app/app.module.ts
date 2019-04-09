@@ -1,19 +1,52 @@
-import { BrowserModule } from '@angular/platform-browser';
+// Modules
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NavbarComponent } from './navbar/navbar.component';
+import { RoutingModule } from './routing/routing.module';
+//import { HttpClient } from '@angular/common/http';
+//import { AngularMaterialModule } from './angular-material.module';
 import {
   MatInputModule,
   MatCardModule,
   MatButtonModule,
   MatToolbarModule,
   MatExpansionModule,
+  MatAutocompleteModule,
+  MatBadgeModule,
+  MatBottomSheetModule,
+  MatButtonToggleModule,
+  MatCheckboxModule,
+  MatChipsModule,
+  MatDatepickerModule,
+  MatDialogModule,
+  MatDividerModule,
+  MatGridListModule,
+  MatIconModule,
+  MatListModule,
+  MatMenuModule,
+  MatNativeDateModule,
+  MatPaginatorModule,
+  MatProgressBarModule,
+  MatProgressSpinnerModule,
+  MatRadioModule,
+  MatRippleModule,
+  MatSelectModule,
+  MatSidenavModule,
+  MatSliderModule,
+  MatSlideToggleModule,
+  MatSnackBarModule,
+  MatSortModule,
+  MatStepperModule,
+  MatTableModule,
+  MatTabsModule,
+  MatTooltipModule,
+  MatTreeModule,
 } from '@angular/material';
-import {MatIconModule} from '@angular/material/icon';
-//import {HttpClient} from '@angular/common/http'
 
-
+// Components
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { CreatePlanComponent } from './teaching-plan/create-plan/create-plan.component';
@@ -48,20 +81,59 @@ import { ListClassesComponent } from './classes/list-classes/list-classes.compon
     RegisterProfessorComponent,
     ListUsersComponent,
     RegisterClassComponent,
-    ListClassesComponent
+    ListClassesComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
+    RoutingModule,
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    RoutingModule,
+    //AngularMaterialModule,
+    //HttpClient,
     MatInputModule,
     MatCardModule,
     MatButtonModule,
     MatToolbarModule,
     MatExpansionModule,
     MatIconModule,
-    //HttpClient
+    MatAutocompleteModule,
+    MatBadgeModule,
+    MatBottomSheetModule,
+    MatButtonModule,
+    MatButtonToggleModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatChipsModule,
+    MatStepperModule,
+    MatDatepickerModule,
+    MatDialogModule,
+    MatDividerModule,
+    MatExpansionModule,
+    MatGridListModule,
+    MatIconModule,
+    MatInputModule,
+    MatListModule,
+    MatMenuModule,
+    MatNativeDateModule,
+    MatPaginatorModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
+    MatRadioModule,
+    MatRippleModule,
+    MatSelectModule,
+    MatSidenavModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatSnackBarModule,
+    MatSortModule,
+    MatTableModule,
+    MatTabsModule,
+    MatToolbarModule,
+    MatTooltipModule,
+    MatTreeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

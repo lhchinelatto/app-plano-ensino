@@ -7,7 +7,7 @@ const courseSchema = mongoose.Schema({
   name: { type: String, required: true, unique: true },
   coordenator: { type: [ObjectId], required: true },
   classes: { type: [ObjectId] },
-  courses: { type: [ObjectId] }
+  disciplines: { type: [ObjectId] }
 });
 
 courseSchema.plugin(uniqueValidator);

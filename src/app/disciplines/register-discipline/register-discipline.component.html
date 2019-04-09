@@ -1,3 +1,20 @@
-<p>
-  register-discipline works!
-</p>
+<form [formGroup]="dscForm" (ngSubmit)="onSubmit()">
+    <div class="form-container">
+      <div class="form-group">
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Nome da Disciplina" formControlName="name" class="form-control" required [ngClass]="{ 'is-invalid':   f.name.errors }">
+          <mat-error *ngIf="f.name.errors && f.name.errors.maxLength">Este campo deve conter no máximo 128 caracteres</mat-error>
+          <mat-error *ngIf="f.name.errors && f.name.errors.required">Campo obrigatório</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="form-group">
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Créditos" type="number" formControlName="credits" class="form-control" required [ngClass]="{ 'is-invalid':   f.credits.errors }">
+          <mat-error *ngIf="f.credits.errors && f.credits.errors.required">Campo obrigatório</mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <button mat-stroked-button color="primary" type="submit" >Submit</button>
+        <!--- [disabled]="!admForm.valid" -->
+      </div>
+    </div>

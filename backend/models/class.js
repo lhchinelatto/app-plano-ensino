@@ -6,7 +6,7 @@ const ObjectId = mongoose.Schema.Types.ObjectId;
 const classSchema = mongoose.Schema({
   classId: { type: String, required: true, unique: true },
   professor: { type: ObjectId, required: true },
-  weekday: { type: String, required: true },
+  weekday: { type: [String], required: true },
   discipline: { type: ObjectId, required: true }
 });
 

@@ -1,1 +1,20 @@
-<mat-toolbar color="primary">Facens</mat-toolbar>
+<mat-toolbar color="primary">
+  <span>
+      <a routerLink="/">Facens</a>
+  </span>
+  <span class="spacer"></span>
+  <ul>
+    <li>
+        <a mat-button routerLink="/register-user" routerLinkActive="">Cadastrar Usuários</a>
+    </li>
+    <li>
+        <a mat-button routerLink="/register-course" routerLinkActive="">Cadastrar Cursos</a>
+    </li>
+    <li>
+        <a mat-button routerLink="/register-discipline" routerLinkActive="">Cadastrar Disciplinas</a>
+    </li>
+    <li>
+        <a mat-button routerLink="/register-class" routerLinkActive="">Cadastrar Turmas</a>
+    </li>
+  </ul>
+</mat-toolbar>
