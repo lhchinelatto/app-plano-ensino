@@ -11,6 +11,7 @@ import {
   MatExpansionModule,
 } from '@angular/material';
 import {MatIconModule} from '@angular/material/icon';
+//import {HttpClient} from '@angular/common/http'
 
 
 import { AppComponent } from './app.component';
@@ -59,7 +60,8 @@ import { ListClassesComponent } from './classes/list-classes/list-classes.compon
     MatButtonModule,
     MatToolbarModule,
     MatExpansionModule,
-    MatIconModule
+    MatIconModule,
+    //HttpClient
   ],
   providers: [],
   bootstrap: [AppComponent]
