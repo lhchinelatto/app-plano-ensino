@@ -1,6 +1,6 @@
 export interface Course {
   name: string;
-  coordenator: [string];
+  coordinator: [string];
   classes: [string];
   disciplines: [string];
 }

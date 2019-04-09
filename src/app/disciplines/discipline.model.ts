@@ -1,6 +1,6 @@
 export interface Discipline {
   name: string;
-  credits: number;
+  credits: string;
   classes: [string];
   courses: [string];
 }

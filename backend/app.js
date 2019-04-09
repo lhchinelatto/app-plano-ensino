@@ -46,9 +46,9 @@ app.use((req, res, next) => {
 });
 
 // Routes
-app.use("/api/user", userRoutes);
-app.use("/api/class", classRoutes);
-app.use("/api/discipline", disciplineRoutes);
-app.use("/api/course", courseRoutes);
+app.use("/api/users", userRoutes);
+app.use("/api/classes", classRoutes);
+app.use("/api/disciplines", disciplineRoutes);
+app.use("/api/courses", courseRoutes);
 
 module.exports = app;

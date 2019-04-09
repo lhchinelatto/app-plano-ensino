@@ -8,9 +8,9 @@ const userSchema = mongoose.Schema({
   lastName: { type: String, required: true },
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
-  role: { type: [String], enum: ["Admin", "Professor", "Coordinator"]},
-  classes: { type: [ObjectId]},
-  courses: { type: [ObjectId]}
+  role: { type: [String], enum: ["Admin", "Professor", "Coordinator"] },
+  classes: { type: [ObjectId], ref: "Class" },
+  courses: { type: [ObjectId], ref: "Courses" }
 });
 
 userSchema.plugin(uniqueValidator);

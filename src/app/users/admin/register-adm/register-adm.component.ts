@@ -12,6 +12,7 @@ export class RegisterAdmComponent implements OnInit {
   submitted = false;
   hidePass = true;
   hideConf = true;
+  public roles: string[] = ['Admin', 'Professor', 'Coordenador'];
 
   constructor(private formBuilder: FormBuilder) { }
 
@@ -20,6 +21,7 @@ export class RegisterAdmComponent implements OnInit {
       firstName: ['', [Validators.required, Validators.maxLength(128)]],
       lastName: ['', [Validators.required, Validators.maxLength(128)]],
       email: ['', [Validators.required, Validators.email, Validators.maxLength(64)]],
+      role: ['', [Validators.required]],
       password: ['', [Validators.required, Validators.minLength(8), Validators.maxLength(32)]],
       confirmPassword: ['', [Validators.required, Validators.minLength(8), Validators.maxLength(32)]]
     }, {

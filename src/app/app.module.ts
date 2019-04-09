@@ -6,7 +6,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RoutingModule } from './routing/routing.module';
-//import { HttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 //import { AngularMaterialModule } from './angular-material.module';
 import {
   MatInputModule,
@@ -92,7 +92,7 @@ import { ListClassesComponent } from './classes/list-classes/list-classes.compon
     BrowserAnimationsModule,
     RoutingModule,
     //AngularMaterialModule,
-    //HttpClient,
+    HttpClientModule,
     MatInputModule,
     MatCardModule,
     MatButtonModule,

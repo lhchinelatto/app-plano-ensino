@@ -1,4 +1,4 @@
-<form [formGroup]="dscForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="dscForm" (submit)="onSubmit()" *ngIf="!isLoading">
     <div class="form-container">
       <div class="form-group">
         <mat-form-field class="full-width">
@@ -9,7 +9,7 @@
       </div>
       <div class="form-group">
         <mat-form-field class="full-width">
-          <input matInput placeholder="Créditos" type="number" formControlName="credits" class="form-control" required [ngClass]="{ 'is-invalid':   f.credits.errors }">
+          <input matInput placeholder="Créditos" formControlName="credits" class="form-control" required [ngClass]="{ 'is-invalid':   f.credits.errors }">
           <mat-error *ngIf="f.credits.errors && f.credits.errors.required">Campo obrigatório</mat-error>
         </mat-form-field>
       </div>

@@ -5,9 +5,9 @@ const ObjectId = mongoose.Schema.Types.ObjectId;
 
 const courseSchema = mongoose.Schema({
   name: { type: String, required: true, unique: true },
-  coordenator: { type: [ObjectId], required: true },
-  classes: { type: [ObjectId] },
-  disciplines: { type: [ObjectId] }
+  coordinator: { type: [ObjectId], ref: "User", required: true },
+  classes: { type: [ObjectId], ref: "Class" },
+  disciplines: { type: [ObjectId], ref: "Discipline" }
 });
 
 courseSchema.plugin(uniqueValidator);

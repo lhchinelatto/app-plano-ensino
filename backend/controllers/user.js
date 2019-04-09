@@ -5,8 +5,11 @@ const User = require("../models/user");
 exports.createUser = (req, res, next) => {
   bcrypt.hash(req.body.password, 10).then(hash => {
     const user = new User({
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
       email: req.body.email,
-      password: hash
+      password: hash,
+      role: req.body.role
     });
     user
       .save()
@@ -23,6 +26,44 @@ exports.createUser = (req, res, next) => {
       });
   });
 }
+
+exports.getUser = (req, res, next) => {
+  User.findById(req.params.id)
+   .then(user => {
+     if (user) {
+       res.status(200).json(user);
+     } else {
+       res.status(404).json({ message: " User not found!" });
+     }
+   })
+   .catch(error => {
+     res.status(500).json({
+       message: "Fetching user failed!"
+     });
+   });
+};
+
+exports.getUsers = (req, res, next) => {
+ const userQuery =  User.find();
+ let fetchedUsers;
+ userQuery
+   .then(documents => {
+     fetchedUsers = documents;
+     return  User.count();
+   })
+   .then(count => {
+     res.status(200).json({
+       message: " Users fetched successfully!",
+       users: fetchedUsers,
+       maxUsers: count
+     });
+   })
+   .catch(error => {
+     res.status(500).json({
+       message: "Fetching users failed!"
+     });
+   });
+};
 
 exports.userLogin = (req, res, next) => {
   let fetchedUser;

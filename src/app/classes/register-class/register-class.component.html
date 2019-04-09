@@ -19,7 +19,8 @@
     <div class="form-group">
       <mat-form-field class="full-width">
         <mat-label>Dia(s) da Semana</mat-label>
-        <mat-select formControlName="weekday" class="form-control" required multiple [ngClass]="{ 'is-invalid':   f.weekday.errors }">
+        <mat-select formControlName="weekday" class="form-control" required multiple
+          [ngClass]="{ 'is-invalid':   f.weekday.errors }">
           <mat-option *ngFor="let days of weekdays" value="days">{{days}}</mat-option>
           <mat-error *ngIf="f.weekday.errors && f.weekday.errors.required">Campo obrigatório</mat-error>
         </mat-select>
